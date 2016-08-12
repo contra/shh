@@ -1,3 +1,10 @@
+// play the song
+var audio = document.createElement('video')
+audio.loop = true
+audio.autoplay = true
+audio.src = 'res/song.mp3'
+audio.play()
+
 // set the stage
 var camera = new THREE.PerspectiveCamera(55, 1080/ 720, 20, 3000)
 camera.position.z = 1000
@@ -8,7 +15,7 @@ var scene = new THREE.Scene()
 var video = document.createElement('video')
 video.loop = true
 video.muted = true
-video.src = 'video/fits.mp4'
+video.src = 'res/fits.mp4'
 video.play()
 
 // make texture
