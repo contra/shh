@@ -2,7 +2,7 @@
 var audio = document.createElement('video')
 audio.loop = true
 audio.autoplay = true
-audio.src = 'res/song.mp3'
+audio.src = 'res/touch.mp3'
 audio.play()
 
 // set the stage
@@ -15,7 +15,7 @@ var scene = new THREE.Scene()
 var video = document.createElement('video')
 video.loop = true
 video.muted = true
-video.src = 'res/fits.mp4'
+video.src = 'res/queen.mp4'
 video.play()
 
 // make texture
@@ -49,16 +49,16 @@ var staticPass = new THREE.ShaderPass(THREE.StaticShader)
 var copyPass = new THREE.ShaderPass(THREE.CopyShader)
 
 // set up shader pass params
-badTVPass.uniforms.distortion.value = 3.0
-badTVPass.uniforms.distortion2.value = 0.5
-badTVPass.uniforms.speed.value = 0.01
+badTVPass.uniforms.distortion.value = 4.5
+badTVPass.uniforms.distortion2.value = 1.0
+badTVPass.uniforms.speed.value = 0.03
 badTVPass.uniforms.rollSpeed.value = 0.03
 
 staticPass.uniforms.amount.value = 0.1
 staticPass.uniforms.size.value = 4.0
 
 rgbPass.uniforms.amount.value = 0.04
-rgbPass.uniforms.angle.value = 2.0
+rgbPass.uniforms.angle.value = 0.5
 
 filmPass.uniforms.sCount.value = 800
 filmPass.uniforms.sIntensity.value = 0.9
