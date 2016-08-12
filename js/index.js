@@ -45,12 +45,12 @@ var copyPass = new THREE.ShaderPass(THREE.CopyShader)
 badTVPass.uniforms.distortion.value = 3.0
 badTVPass.uniforms.distortion2.value = 0.5
 badTVPass.uniforms.speed.value = 0.01
-badTVPass.uniforms.rollSpeed.value = 0.07
+badTVPass.uniforms.rollSpeed.value = 0.03
 
-staticPass.uniforms.amount.value = 0.2
+staticPass.uniforms.amount.value = 0.1
 staticPass.uniforms.size.value = 4.0
 
-rgbPass.uniforms.amount.value = 0.1
+rgbPass.uniforms.amount.value = 0.04
 rgbPass.uniforms.angle.value = 2.0
 
 filmPass.uniforms.sCount.value = 800
@@ -75,6 +75,7 @@ animate()
 
 function animate() {
 	shaderTime += 0.1
+
 	badTVPass.uniforms.time.value = shaderTime
 	filmPass.uniforms.time.value = shaderTime
 	staticPass.uniforms.time.value = shaderTime

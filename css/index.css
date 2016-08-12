@@ -2,11 +2,28 @@ html, body {
   height: 100%;
   width: 100%;
   background: #000;
-  color: green;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 #root {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
+  z-index: 99;
+  padding: 20px;
+}
+
+.big-header {
+  text-align: center;
+  font-size: 10rem;
+  font-family: 'Creepster', cursive;
+  text-shadow: #000 1px 1px, #000 2px 2px, #000 3px 3px, #000 4px 4px, #000 5px 5px, #000 6px 6px, #000 7px 7px, #000 8px 8px, #000 9px 9px, #000 10px 10px, #000 11px 11px;
 }
