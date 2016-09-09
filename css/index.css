@@ -5,6 +5,7 @@ html, body {
   color: #fff;
   user-select: none;
   -webkit-user-select: none;
+  cursor: url('../res/cursor.cur'), auto;
 }
 
 * {
