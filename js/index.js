@@ -9,9 +9,9 @@ audio.play()
 var video = document.createElement('video')
 video.loop = true
 video.muted = true
+video.autoplay = true
 video.preload = 'metadata'
-video.playsinline = true
-video['webkit-playsinline'] = true
+video.playsinline = video['webkit-playsinline'] = true
 video.src = 'res/queen.mp4'
 makeVideoPlayableInline(video, false)
 video.play()
@@ -19,11 +19,11 @@ video.play()
 // for shit mobile, make it play on any click
 document.addEventListener('click', function(){
 	audio.play()
-	video.play()
+	// video.play()
 }, false)
 document.addEventListener('touchstart', function(){
 	audio.play()
-	video.play()
+	// video.play()
 }, false)
 
 // set the stage
