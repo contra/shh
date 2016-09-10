@@ -11,6 +11,7 @@ video.loop = true
 video.muted = true
 video.preload = 'metadata'
 video.playsinline = true
+video['webkit-playsinline'] = true
 video.src = 'res/queen.mp4'
 video.play()
 
