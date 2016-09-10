@@ -5,16 +5,12 @@ audio.autoplay = true
 audio.src = 'res/touch.mp3'
 audio.play()
 
-// set the stage
-var camera = new THREE.PerspectiveCamera(55, 1080/ 720, 20, 3000)
-camera.position.z = 1000
-
-var scene = new THREE.Scene()
-
 // make video
 var video = document.createElement('video')
 video.loop = true
 video.muted = true
+video.preload = 'metadata'
+video.playsinline = true
 video.src = 'res/queen.mp4'
 video.play()
 
@@ -23,10 +19,16 @@ document.addEventListener('click', function(){
 	audio.play()
 	video.play()
 }, false)
-document.addEventListener('touchstart', function(){
+document.addEventListener('touchend', function(){
 	audio.play()
 	video.play()
 }, false)
+
+// set the stage
+var camera = new THREE.PerspectiveCamera(55, 1080/ 720, 20, 3000)
+camera.position.z = 1000
+
+var scene = new THREE.Scene()
 
 // make texture
 var videoTexture = new THREE.Texture(video)
