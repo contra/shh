@@ -1,7 +1,8 @@
 // play the song
-var audio = document.createElement('video')
+var audio = document.createElement('audio')
 audio.loop = true
 audio.autoplay = true
+audio.preload = 'metadata'
 audio.src = 'res/touch.mp3'
 audio.play()
 
