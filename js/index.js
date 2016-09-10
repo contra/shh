@@ -13,6 +13,7 @@ video.preload = 'metadata'
 video.playsinline = true
 video['webkit-playsinline'] = true
 video.src = 'res/queen.mp4'
+makeVideoPlayableInline(video, false)
 video.play()
 
 // for shit mobile, make it play on any click
@@ -20,7 +21,7 @@ document.addEventListener('click', function(){
 	audio.play()
 	video.play()
 }, false)
-document.addEventListener('touchend', function(){
+document.addEventListener('touchstart', function(){
 	audio.play()
 	video.play()
 }, false)
