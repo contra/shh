@@ -18,6 +18,16 @@ video.muted = true
 video.src = 'res/queen.mp4'
 video.play()
 
+// for shit mobile, make it play on any click
+document.addEventListener('click', function(){
+	audio.play()
+	video.play()
+}, false)
+document.addEventListener('touchstart', function(){
+	audio.play()
+	video.play()
+}, false)
+
 // make texture
 var videoTexture = new THREE.Texture(video)
 videoTexture.minFilter = THREE.LinearFilter
